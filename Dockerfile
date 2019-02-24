@@ -17,10 +17,10 @@ RUN	echo "deb http://apt.llvm.org/stretch/ llvm-toolchain-stretch main" > \
 			/etc/apt/sources.list.d/llvm.list && \
 		apt-key adv --fetch-keys https://apt.llvm.org/llvm-snapshot.gpg.key && \
 		apt-get -y update && \
-		apt-get -y upgrade && \
 		apt-get -y install --no-install-recommends \
 			make cmake git bash \
 			binutils-gold clang \
-			llvm-runtime lld 
+			llvm-runtime lld \
+			vim qemu 
 
 CMD [ "/bin/bash" ]
